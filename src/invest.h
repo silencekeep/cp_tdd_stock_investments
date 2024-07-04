@@ -1,4 +1,4 @@
-#include <string>
+/* #include <string>
 #include <vector>
 #include <sstream>
 using namespace std;
@@ -35,4 +35,4 @@ double get_sum_exchanges_by_stock(const vector<xchange_rate> &exchanges_rate, co
 
 double get_sum_exchanges_by_name(const vector<xchange_rate> &exchanges_rate, const vector<xchange> &exchanges, const string &currency, const string &name);
 
-vector<int> get_xchg_result(const vector<xchange_rate> &exchanges_rate, const vector<xchange> &exchanges, const vector<question> &questions);
+vector<int> get_xchg_result(const vector<xchange_rate> &exchanges_rate, const vector<xchange> &exchanges, const vector<question> &questions); */
