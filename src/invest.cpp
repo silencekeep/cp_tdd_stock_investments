@@ -1,4 +1,4 @@
-/* #include "invest.h"
+#include "invest.h"
 
 xchange string_to_exchange(string input_line) {
     xchange result;
@@ -93,4 +93,3 @@ vector<int> get_xchg_result(
     }
     return result_list;
 }
- */
