@@ -1,4 +1,4 @@
-#include "invest.h"
+/* #include "invest.h"
 #include <iostream>
 
 using namespace std;
@@ -37,4 +37,4 @@ int main(int argc, char* argv[]){
         cout << list.at(i) << endl;
     }
     return 0;
-}
+} */
