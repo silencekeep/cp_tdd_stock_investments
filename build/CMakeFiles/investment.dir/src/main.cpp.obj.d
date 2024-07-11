@@ -108,4 +108,5 @@ CMakeFiles/investment.dir/src/main.cpp.obj: \
  e:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\ostream.tcc \
  e:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\istream.tcc \
  e:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\sstream.tcc \
+ C:\Users\56279\Desktop\investment\src\object.h \
  e:\mingw\lib\gcc\mingw32\6.3.0\include\c++\iostream

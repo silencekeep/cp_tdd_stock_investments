@@ -182,4 +182,5 @@ CMakeFiles/mytest.dir/src/test.cpp.obj: \
  C:/Users/56279/Desktop/investment/include/gtest/gtest_prod.h \
  C:/Users/56279/Desktop/investment/include/gtest/gtest-typed-test.h \
  C:/Users/56279/Desktop/investment/include/gtest/gtest_pred_impl.h \
- C:\Users\56279\Desktop\investment\src\invest.h
+ C:\Users\56279\Desktop\investment\src\invest.h \
+ C:\Users\56279\Desktop\investment\src\object.h
