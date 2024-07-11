@@ -21,9 +21,9 @@ TEST(testCase, given_sample_in_ppt)
     input.emplace_back("STOCK A CNY");
 
     string out;
-    vector<xchange> xchg_list;
-    vector<xchange_rate> xchg_rate_list;
-    vector<question> questions;
+    vector<xchangeImpl> xchg_list;
+    vector<xchange_rateImpl> xchg_rate_list;
+    vector<questionImpl> questions;
     int a = stol(input[p++]);
     while(a--) xchg_list.emplace_back(string_to_exchange(input[p++]));
     int b = stol(input[p++]);
@@ -93,9 +93,9 @@ TEST(testCase, generated_by_chatgpt)
     input.emplace_back("STOCK D JPY");
 
     string out;
-    vector<xchange> xchg_list;
-    vector<xchange_rate> xchg_rate_list;
-    vector<question> questions;
+    vector<xchangeImpl> xchg_list;
+    vector<xchange_rateImpl> xchg_rate_list;
+    vector<questionImpl> questions;
     int a = stol(input[p++]);
     while(a--) xchg_list.emplace_back(string_to_exchange(input[p++]));
     int b = stol(input[p++]);
@@ -125,9 +125,9 @@ TEST(testCase, manual_adapted)
     input.emplace_back("STOCK F USD");
 
     string out;
-    vector<xchange> xchg_list;
-    vector<xchange_rate> xchg_rate_list;
-    vector<question> questions;
+    vector<xchangeImpl> xchg_list;
+    vector<xchange_rateImpl> xchg_rate_list;
+    vector<questionImpl> questions;
     int a = stol(input[p++]);
     while(a--) xchg_list.emplace_back(string_to_exchange(input[p++]));
     int b = stol(input[p++]);
@@ -152,9 +152,9 @@ TEST(testCase, empty_sample)
     input.emplace_back("0");
 
     string out;
-    vector<xchange> xchg_list;
-    vector<xchange_rate> xchg_rate_list;
-    vector<question> questions;
+    vector<xchangeImpl> xchg_list;
+    vector<xchange_rateImpl> xchg_rate_list;
+    vector<questionImpl> questions;
     int a = stol(input[p++]);
     while(a--) xchg_list.emplace_back(string_to_exchange(input[p++]));
     int b = stol(input[p++]);
@@ -204,9 +204,9 @@ TEST(testCase, shrinked_chatgpt_sample)
     input.emplace_back("STOCK B USD");
 
     string out;
-    vector<xchange> xchg_list;
-    vector<xchange_rate> xchg_rate_list;
-    vector<question> questions;
+    vector<xchangeImpl> xchg_list;
+    vector<xchange_rateImpl> xchg_rate_list;
+    vector<questionImpl> questions;
     int a = stol(input[p++]);
     while(a--) xchg_list.emplace_back(string_to_exchange(input[p++]));
     int b = stol(input[p++]);

@@ -1,9 +1,10 @@
 #include <string>
 #include <vector>
 #include <sstream>
+#include "object.h"
 using namespace std;
 
-class xchange {
+class xchangeImpl : stock_object, xchange {
 private:
     std::string stock_type;
     std::string holder_name;
@@ -29,7 +30,7 @@ public:
     void setValuePerStock(int value) { value_per_stock = value; }
 };
 
-class xchange_rate {
+class xchange_rateImpl : stock_object, xchange_rate   {
 private:
     std::string source;
     std::string destination;
@@ -50,7 +51,7 @@ public:
     void setRatio(double rat) { ratio = rat; }
 };
 
-class question {
+class questionImpl : stock_object, question  {
 private:
     std::string type;
     std::string name;
