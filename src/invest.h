@@ -29,18 +29,47 @@ public:
     void setValuePerStock(int value) { value_per_stock = value; }
 };
 
-
-typedef struct {
-    string source;
-    string destination;
+class xchange_rate {
+private:
+    std::string source;
+    std::string destination;
     double ratio;
-} xchange_rate;
 
-typedef struct {
-    string type;
-    string name;
-    string currency;
-} question;
+public:
+    xchange_rate(const std::string& src, const std::string& dest, double rat)
+        : source(src), destination(dest), ratio(rat) {}
+
+    xchange_rate() : source(""), destination(""), ratio(0.0) {}
+
+    std::string getSource() const { return source; }
+    std::string getDestination() const { return destination; }
+    double getRatio() const { return ratio; }
+
+    void setSource(const std::string& src) { source = src; }
+    void setDestination(const std::string& dest) { destination = dest; }
+    void setRatio(double rat) { ratio = rat; }
+};
+
+class question {
+private:
+    std::string type;
+    std::string name;
+    std::string currency;
+
+public:
+    question(const std::string& qType, const std::string& qName, const std::string& curr)
+        : type(qType), name(qName), currency(curr) {}
+
+    question() : type(""), name(""), currency("") {}
+
+    std::string getType() const { return type; }
+    std::string getName() const { return name; }
+    std::string getCurrency() const { return currency; }
+
+    void setType(const std::string& qType) { type = qType; }
+    void setName(const std::string& qName) { name = qName; }
+    void setCurrency(const std::string& curr) { currency = curr; }
+};
 
 xchange string_to_exchange(string input_line);
 

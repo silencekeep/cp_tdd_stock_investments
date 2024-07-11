@@ -2,18 +2,30 @@
 
 xchange string_to_exchange(string input_line) {
     xchange result;
+    string stock_type, holder_name, currency;
+    int stock_count, value_per_stock;
     stringstream ss(input_line);
-    ss >> result.stock_type >> result.holder_name;
-    ss >> result.currency >> result.stock_count;
-    ss >> result.value_per_stock;
+    ss >> stock_type >> holder_name;
+    ss >> currency >> stock_count;
+    ss >> value_per_stock;
+    result.setValuePerStock(value_per_stock);
+    result.setCurrency(currency);
+    result.setStockCount(stock_count);
+    result.getStockType(stock_type);
+    result.setHolderName(holder_name);
     return result;
 }
 
 xchange_rate string_to_exchange_rate(string input_line) {
     xchange_rate result;
+    string source, destination;
+    double ratio;
     stringstream ss(input_line);
-    ss >> result.source >> result.destination;
-    ss >> result.ratio;
+    ss >> source >> destination;
+    ss >> ratio;
+    result.setDestination(destination);
+    result.setSource(source);
+    result.setRatio(ratio);
     return result;
 }
 
