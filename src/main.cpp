@@ -6,9 +6,9 @@ using namespace std;
 int main(int argc, char* argv[]){
     int i = 0, p = 0;
     string out;
-    vector<xchangeImpl> xchg_list;
-    vector<xchange_rateImpl> xchg_rate_list;
-    vector<questionImpl> questions;
+    vector<xchange> xchg_list;
+    vector<xchange_rate> xchg_rate_list;
+    vector<question> questions;
     int a, b, c;
     bool aa = true, bb = true, cc = true;
     cin >> a;

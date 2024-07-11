@@ -4,7 +4,7 @@
 #include "object.h"
 using namespace std;
 
-class xchangeImpl : stock_object, xchange {
+class xchange :public stock_object{
 private:
     std::string stock_type;
     std::string holder_name;
@@ -30,7 +30,7 @@ public:
     void setValuePerStock(int value) { value_per_stock = value; }
 };
 
-class xchange_rateImpl : stock_object, xchange_rate   {
+class xchange_rate :public stock_object {
 private:
     std::string source;
     std::string destination;
@@ -51,7 +51,7 @@ public:
     void setRatio(double rat) { ratio = rat; }
 };
 
-class questionImpl : stock_object, question  {
+class question : public stock_object {
 private:
     std::string type;
     std::string name;

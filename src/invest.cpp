@@ -1,7 +1,7 @@
 #include "invest.h"
 
-xchangeImpl string_to_exchange(string input_line) {
-    xchangeImpl result;
+xchange string_to_exchange(string input_line) {
+    xchange result;
     string stock_type, holder_name, currency;
     int stock_count, value_per_stock;
     stringstream ss(input_line);
@@ -16,8 +16,8 @@ xchangeImpl string_to_exchange(string input_line) {
     return result;
 }
 
-xchange_rateImpl string_to_exchange_rate(string input_line) {
-    xchange_rateImpl result;
+xchange_rate string_to_exchange_rate(string input_line) {
+    xchange_rate result;
     string source, destination;
     double ratio;
     stringstream ss(input_line);
@@ -29,8 +29,8 @@ xchange_rateImpl string_to_exchange_rate(string input_line) {
     return result;
 }
 
-questionImpl string_to_question(string input_line) {
-    questionImpl result;
+question string_to_question(string input_line) {
+    question result;
     stringstream ss(input_line);
     string type, name, currency;
     ss >> type >> name >> currency;
@@ -41,7 +41,7 @@ questionImpl string_to_question(string input_line) {
 }
 
 double get_exchange_ratio(
-    const vector<xchange_rateImpl>& exchange_rates, \
+    const vector<xchange_rate>& exchange_rates, \
     const string& source, \
     const string& destination) {
     if (source == destination)
@@ -56,8 +56,8 @@ double get_exchange_ratio(
 }
 
 double get_sum_exchanges_by_stock(
-    const vector<xchange_rateImpl>& exchanges_rate, \
-    const vector<xchangeImpl>& exchanges, \
+    const vector<xchange_rate>& exchanges_rate, \
+    const vector<xchange>& exchanges, \
     const string& currency, \
     const string& stock) {
     double result = 0;
@@ -72,8 +72,8 @@ double get_sum_exchanges_by_stock(
 }
 
 double get_sum_exchanges_by_name(
-    const vector<xchange_rateImpl>& exchanges_rate, \
-    const vector<xchangeImpl>& exchanges, \
+    const vector<xchange_rate>& exchanges_rate, \
+    const vector<xchange>& exchanges, \
     const string& currency, \
     const string& name) {
     double result = 0;
@@ -88,8 +88,8 @@ double get_sum_exchanges_by_name(
 }
 
 vector<int> get_xchg_result(
-    const vector<xchange_rateImpl>& exchanges_rate, \
-    const vector<xchangeImpl>& exchanges, \
+    const vector<xchange_rate>& exchanges_rate, \
+    const vector<xchange>& exchanges, \
     const vector<question>& questions) {
     vector<int> result_list;
     for (auto it = questions.begin(); it != questions.end(); it++) {
