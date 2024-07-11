@@ -73,30 +73,30 @@ CMakeFiles/mytest.dir/src/invest.cpp.obj: CMakeFiles/mytest.dir/includes_CXX.rsp
 CMakeFiles/mytest.dir/src/invest.cpp.obj: C:/Users/56279/Desktop/investment/src/invest.cpp
 CMakeFiles/mytest.dir/src/invest.cpp.obj: CMakeFiles/mytest.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\56279\Desktop\investment\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/mytest.dir/src/invest.cpp.obj"
-	E:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mytest.dir/src/invest.cpp.obj -MF CMakeFiles\mytest.dir\src\invest.cpp.obj.d -o CMakeFiles\mytest.dir\src\invest.cpp.obj -c C:\Users\56279\Desktop\investment\src\invest.cpp
+	E:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mytest.dir/src/invest.cpp.obj -MF CMakeFiles\mytest.dir\src\invest.cpp.obj.d -o CMakeFiles\mytest.dir\src\invest.cpp.obj -c C:\Users\56279\Desktop\investment\src\invest.cpp
 
 CMakeFiles/mytest.dir/src/invest.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/mytest.dir/src/invest.cpp.i"
-	E:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\56279\Desktop\investment\src\invest.cpp > CMakeFiles\mytest.dir\src\invest.cpp.i
+	E:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\56279\Desktop\investment\src\invest.cpp > CMakeFiles\mytest.dir\src\invest.cpp.i
 
 CMakeFiles/mytest.dir/src/invest.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/mytest.dir/src/invest.cpp.s"
-	E:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\56279\Desktop\investment\src\invest.cpp -o CMakeFiles\mytest.dir\src\invest.cpp.s
+	E:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\56279\Desktop\investment\src\invest.cpp -o CMakeFiles\mytest.dir\src\invest.cpp.s
 
 CMakeFiles/mytest.dir/src/test.cpp.obj: CMakeFiles/mytest.dir/flags.make
 CMakeFiles/mytest.dir/src/test.cpp.obj: CMakeFiles/mytest.dir/includes_CXX.rsp
 CMakeFiles/mytest.dir/src/test.cpp.obj: C:/Users/56279/Desktop/investment/src/test.cpp
 CMakeFiles/mytest.dir/src/test.cpp.obj: CMakeFiles/mytest.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\56279\Desktop\investment\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/mytest.dir/src/test.cpp.obj"
-	E:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mytest.dir/src/test.cpp.obj -MF CMakeFiles\mytest.dir\src\test.cpp.obj.d -o CMakeFiles\mytest.dir\src\test.cpp.obj -c C:\Users\56279\Desktop\investment\src\test.cpp
+	E:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mytest.dir/src/test.cpp.obj -MF CMakeFiles\mytest.dir\src\test.cpp.obj.d -o CMakeFiles\mytest.dir\src\test.cpp.obj -c C:\Users\56279\Desktop\investment\src\test.cpp
 
 CMakeFiles/mytest.dir/src/test.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/mytest.dir/src/test.cpp.i"
-	E:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\56279\Desktop\investment\src\test.cpp > CMakeFiles\mytest.dir\src\test.cpp.i
+	E:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\56279\Desktop\investment\src\test.cpp > CMakeFiles\mytest.dir\src\test.cpp.i
 
 CMakeFiles/mytest.dir/src/test.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/mytest.dir/src/test.cpp.s"
-	E:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\56279\Desktop\investment\src\test.cpp -o CMakeFiles\mytest.dir\src\test.cpp.s
+	E:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\56279\Desktop\investment\src\test.cpp -o CMakeFiles\mytest.dir\src\test.cpp.s
 
 # Object files for target mytest
 mytest_OBJECTS = \

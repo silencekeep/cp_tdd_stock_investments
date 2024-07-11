@@ -73,30 +73,30 @@ CMakeFiles/investment.dir/src/invest.cpp.obj: CMakeFiles/investment.dir/includes
 CMakeFiles/investment.dir/src/invest.cpp.obj: C:/Users/56279/Desktop/investment/src/invest.cpp
 CMakeFiles/investment.dir/src/invest.cpp.obj: CMakeFiles/investment.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\56279\Desktop\investment\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/investment.dir/src/invest.cpp.obj"
-	E:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/investment.dir/src/invest.cpp.obj -MF CMakeFiles\investment.dir\src\invest.cpp.obj.d -o CMakeFiles\investment.dir\src\invest.cpp.obj -c C:\Users\56279\Desktop\investment\src\invest.cpp
+	E:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/investment.dir/src/invest.cpp.obj -MF CMakeFiles\investment.dir\src\invest.cpp.obj.d -o CMakeFiles\investment.dir\src\invest.cpp.obj -c C:\Users\56279\Desktop\investment\src\invest.cpp
 
 CMakeFiles/investment.dir/src/invest.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/investment.dir/src/invest.cpp.i"
-	E:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\56279\Desktop\investment\src\invest.cpp > CMakeFiles\investment.dir\src\invest.cpp.i
+	E:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\56279\Desktop\investment\src\invest.cpp > CMakeFiles\investment.dir\src\invest.cpp.i
 
 CMakeFiles/investment.dir/src/invest.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/investment.dir/src/invest.cpp.s"
-	E:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\56279\Desktop\investment\src\invest.cpp -o CMakeFiles\investment.dir\src\invest.cpp.s
+	E:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\56279\Desktop\investment\src\invest.cpp -o CMakeFiles\investment.dir\src\invest.cpp.s
 
 CMakeFiles/investment.dir/src/main.cpp.obj: CMakeFiles/investment.dir/flags.make
 CMakeFiles/investment.dir/src/main.cpp.obj: CMakeFiles/investment.dir/includes_CXX.rsp
 CMakeFiles/investment.dir/src/main.cpp.obj: C:/Users/56279/Desktop/investment/src/main.cpp
 CMakeFiles/investment.dir/src/main.cpp.obj: CMakeFiles/investment.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\56279\Desktop\investment\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/investment.dir/src/main.cpp.obj"
-	E:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/investment.dir/src/main.cpp.obj -MF CMakeFiles\investment.dir\src\main.cpp.obj.d -o CMakeFiles\investment.dir\src\main.cpp.obj -c C:\Users\56279\Desktop\investment\src\main.cpp
+	E:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/investment.dir/src/main.cpp.obj -MF CMakeFiles\investment.dir\src\main.cpp.obj.d -o CMakeFiles\investment.dir\src\main.cpp.obj -c C:\Users\56279\Desktop\investment\src\main.cpp
 
 CMakeFiles/investment.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/investment.dir/src/main.cpp.i"
-	E:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\56279\Desktop\investment\src\main.cpp > CMakeFiles\investment.dir\src\main.cpp.i
+	E:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\56279\Desktop\investment\src\main.cpp > CMakeFiles\investment.dir\src\main.cpp.i
 
 CMakeFiles/investment.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/investment.dir/src/main.cpp.s"
-	E:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\56279\Desktop\investment\src\main.cpp -o CMakeFiles\investment.dir\src\main.cpp.s
+	E:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\56279\Desktop\investment\src\main.cpp -o CMakeFiles\investment.dir\src\main.cpp.s
 
 # Object files for target investment
 investment_OBJECTS = \
