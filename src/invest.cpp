@@ -32,8 +32,11 @@ xchange_rate string_to_exchange_rate(string input_line) {
 question string_to_question(string input_line) {
     question result;
     stringstream ss(input_line);
-    ss >> result.type >> result.name;
-    ss >> result.currency;
+    string type, name, currency;
+    ss >> type >> name >> currency;
+    result.setCurrency(currency);
+    result.setType(type);
+    result.setName(name);
     return result;
 }
 
@@ -44,10 +47,10 @@ double get_exchange_ratio(
     if (source == destination)
         return 1.0;
     for (auto it = exchange_rates.begin(); it != exchange_rates.end(); it++) {
-        if (source == it->source && destination == it->destination)
-            return it->ratio;
-        if (destination == it->source && source == it->destination)
-            return 1.0 / it->ratio;
+        if (source == it->getSource() && destination == it->getDestination())
+            return it->getRatio();
+        if (destination == it->getSource() && source == it->getDestination())
+            return 1.0 / it->getRatio();
     }
     return -1.0;
 }
@@ -59,9 +62,9 @@ double get_sum_exchanges_by_stock(
     const string& stock) {
     double result = 0;
     for (auto it = exchanges.begin(); it != exchanges.end(); it++) {
-        if (it->stock_type == stock) {
-            double target_currency_value = it->stock_count * it->value_per_stock * \
-                get_exchange_ratio(exchanges_rate, it->currency, currency);
+        if (it->getStockType() == stock) {
+            double target_currency_value = it->getStockCount() * it->getValuePerStock() * \
+                get_exchange_ratio(exchanges_rate, it->getCurrency(), currency);
             result += target_currency_value;
         }
     }
@@ -75,9 +78,9 @@ double get_sum_exchanges_by_name(
     const string& name) {
     double result = 0;
     for (auto it = exchanges.begin(); it != exchanges.end(); it++) {
-        if (it->holder_name == name) {
-            double target_currency_value = it->stock_count * it->value_per_stock * \
-                get_exchange_ratio(exchanges_rate, it->currency, currency);
+        if (it->getHolderName() == name) {
+            double target_currency_value = it->getStockCount() * it->getValuePerStock() * \
+                get_exchange_ratio(exchanges_rate, it->getCurrency(), currency);
             result += target_currency_value;
         }
     }
@@ -90,12 +93,12 @@ vector<int> get_xchg_result(
     const vector<question>& questions) {
     vector<int> result_list;
     for (auto it = questions.begin(); it != questions.end(); it++) {
-        if (it->type == "PERSON") {
-            double result = get_sum_exchanges_by_name(exchanges_rate, exchanges, it->currency, it->name);
+        if (it->getType() == "PERSON") {
+            double result = get_sum_exchanges_by_name(exchanges_rate, exchanges, it->getCurrency(), it->getName());
             result_list.emplace_back(int(result));
         }
-        else if (it->type == "STOCK") {
-            double result = get_sum_exchanges_by_stock(exchanges_rate, exchanges, it->currency, it->name);
+        else if (it->getType() == "STOCK") {
+            double result = get_sum_exchanges_by_stock(exchanges_rate, exchanges, it->getCurrency(), it->getName());
             result_list.emplace_back(int(result));
         }
         else {
