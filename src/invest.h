@@ -3,13 +3,32 @@
 #include <sstream>
 using namespace std;
 
-typedef struct {
-    string stock_type;
-    string holder_name;
+class xchange {
+private:
+    std::string stock_type;
+    std::string holder_name;
     int stock_count;
-    string currency;
+    std::string currency;
     int value_per_stock;
-} xchange;
+public:
+    xchange(std::string type, std::string name, int count, std::string curr, int value)
+        : stock_type(type), holder_name(name), stock_count(count), currency(curr), value_per_stock(value) {}
+
+    xchange() : stock_type(""), holder_name(""), stock_count(0), currency(""), value_per_stock(0) {}
+
+    std::string getStockType() const { return stock_type; }
+    std::string getHolderName() const { return holder_name; }
+    int getStockCount() const { return stock_count; }
+    std::string getCurrency() const { return currency; }
+    int getValuePerStock() const { return value_per_stock; }
+
+    void setStockType(const std::string& type) { stock_type = type; }
+    void setHolderName(const std::string& name) { holder_name = name; }
+    void setStockCount(int count) { stock_count = count; }
+    void setCurrency(const std::string& curr) { currency = curr; }
+    void setValuePerStock(int value) { value_per_stock = value; }
+};
+
 
 typedef struct {
     string source;
