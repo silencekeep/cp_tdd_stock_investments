@@ -5,6 +5,7 @@
 *.dll
 *.so
 *.dylib
+*.json
 
 # 忽略IDE或编辑器生成的文件
 .vscode/
