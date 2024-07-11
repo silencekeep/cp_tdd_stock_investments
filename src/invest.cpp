@@ -11,7 +11,7 @@ xchange string_to_exchange(string input_line) {
     result.setValuePerStock(value_per_stock);
     result.setCurrency(currency);
     result.setStockCount(stock_count);
-    result.getStockType(stock_type);
+    result.setStockType(stock_type);
     result.setHolderName(holder_name);
     return result;
 }
