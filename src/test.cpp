@@ -30,9 +30,10 @@ TEST(testCase, given_sample_in_ppt)
     while(b--) xchg_rate_list.emplace_back(string_to_exchange_rate(input[p++]));
     int c = stol(input[p++]);
     while(c--) questions.emplace_back(string_to_question(input[p++]));
-    vector<int> list = get_xchg_result(xchg_rate_list, xchg_list, questions);
+    vector<long long> list = get_xchg_result(xchg_rate_list, xchg_list, questions);
     for(int i = 0; i < list.size(); i++){
-        out += to_string(list[i]) + "\n";
+        string xiaoshu = (list.at(i) % 100 == 0 ? "" : "." + to_string(list.at(i) % 100));
+        out += to_string(list[i] / 100) + xiaoshu + "\n";
     }
     EXPECT_EQ(out,output);
 }
@@ -41,7 +42,7 @@ TEST(testCase, generated_by_chatgpt)
 {
     int i = 0, p = 0;
     vector<string> input;
-    string output = "437747\n582589\n97518\n18075800\n";
+    string output = "437747.25\n582589.41\n97518.83\n18075800\n";
     
     input.emplace_back("35");
     input.emplace_back("A ZhangSan CNY 1000 25");
@@ -102,9 +103,10 @@ TEST(testCase, generated_by_chatgpt)
     while(b--) xchg_rate_list.emplace_back(string_to_exchange_rate(input[p++]));
     int c = stol(input[p++]);
     while(c--) questions.emplace_back(string_to_question(input[p++]));
-    vector<int> list = get_xchg_result(xchg_rate_list, xchg_list, questions);
+    vector<long long> list = get_xchg_result(xchg_rate_list, xchg_list, questions);
     for(int i = 0; i < list.size(); i++){
-        out += to_string(list[i]) + "\n";
+        string xiaoshu = (list.at(i) % 100 == 0 ? "" : "." + to_string(list.at(i) % 100));
+        out += to_string(list[i] / 100) + xiaoshu + "\n";
     }
     EXPECT_EQ(out,output);
 }
@@ -113,7 +115,7 @@ TEST(testCase, manual_adapted)
 {
     int i = 0, p = 0;
     vector<string> input;
-    string output = "158571428\n25070000\n";
+    string output = "158571428.57\n25070000\n";
     
     input.emplace_back("2");
     input.emplace_back("F LaoShi CNY 100000 205");
@@ -134,9 +136,10 @@ TEST(testCase, manual_adapted)
     while(b--) xchg_rate_list.emplace_back(string_to_exchange_rate(input[p++]));
     int c = stol(input[p++]);
     while(c--) questions.emplace_back(string_to_question(input[p++]));
-    vector<int> list = get_xchg_result(xchg_rate_list, xchg_list, questions);
+    vector<long long> list = get_xchg_result(xchg_rate_list, xchg_list, questions);
     for(int i = 0; i < list.size(); i++){
-        out += to_string(list[i]) + "\n";
+        string xiaoshu = (list.at(i) % 100 == 0 ? "" : "." + to_string(list.at(i) % 100));
+        out += to_string(list[i] / 100) + xiaoshu + "\n";
     }
     EXPECT_EQ(out,output);
 }
@@ -161,9 +164,10 @@ TEST(testCase, empty_sample)
     while(b--) xchg_rate_list.emplace_back(string_to_exchange_rate(input[p++]));
     int c = stol(input[p++]);
     while(c--) questions.emplace_back(string_to_question(input[p++]));
-    vector<int> list = get_xchg_result(xchg_rate_list, xchg_list, questions);
+    vector<long long> list = get_xchg_result(xchg_rate_list, xchg_list, questions);
     for(int i = 0; i < list.size(); i++){
-        out += to_string(list[i]) + "\n";
+        string xiaoshu = (list.at(i) % 100 == 0 ? "" : "." + to_string(list.at(i) % 100));
+        out += to_string(list[i] / 100) + xiaoshu + "\n";
     }
     EXPECT_EQ(out,output);
 }
@@ -172,7 +176,7 @@ TEST(testCase, shrinked_chatgpt_sample)
 {
     int i = 0, p = 0;
     vector<string> input;
-    string output = "144842\n21704945\n20224\n";
+    string output = "144842.15\n21704945\n20224.71\n";
     
     input.emplace_back("16");
     input.emplace_back("A ZhangSan CNY 1000 25");
@@ -213,9 +217,78 @@ TEST(testCase, shrinked_chatgpt_sample)
     while(b--) xchg_rate_list.emplace_back(string_to_exchange_rate(input[p++]));
     int c = stol(input[p++]);
     while(c--) questions.emplace_back(string_to_question(input[p++]));
-    vector<int> list = get_xchg_result(xchg_rate_list, xchg_list, questions);
+    vector<long long> list = get_xchg_result(xchg_rate_list, xchg_list, questions);
     for(int i = 0; i < list.size(); i++){
-        out += to_string(list[i]) + "\n";
+        string xiaoshu = (list.at(i) % 100 == 0 ? "" : "." + to_string(list.at(i) % 100));
+        out += to_string(list[i] / 100) + xiaoshu + "\n";
+    }
+    EXPECT_EQ(out,output);
+}
+
+TEST(testCase, more_samples_1) 
+{
+    int i = 0, p = 0;
+    vector<string> input;
+    string output = "37000\n47000\n";
+    
+    input.emplace_back("5");
+    input.emplace_back("A ZhangSan CNY 1000 25");
+    input.emplace_back("A ZhangSan CNY 2000 30");
+    input.emplace_back("A ZhangSan USD 1500 20");
+    input.emplace_back("A ZhangSan EUR 1200 15");
+    input.emplace_back("A LiSi JPY 2200 100");
+    input.emplace_back("1");
+    input.emplace_back("CNY JPY 22");
+    input.emplace_back("2");
+    input.emplace_back("PERSON ZhangSan CNY");
+    input.emplace_back("STOCK A CNY");
+
+    string out;
+    vector<xchange> xchg_list;
+    vector<xchange_rate> xchg_rate_list;
+    vector<question> questions;
+    int a = stol(input[p++]);
+    while(a--) xchg_list.emplace_back(string_to_exchange(input[p++]));
+    int b = stol(input[p++]);
+    while(b--) xchg_rate_list.emplace_back(string_to_exchange_rate(input[p++]));
+    int c = stol(input[p++]);
+    while(c--) questions.emplace_back(string_to_question(input[p++]));
+    vector<long long> list = get_xchg_result(xchg_rate_list, xchg_list, questions);
+    for(int i = 0; i < list.size(); i++){
+        string xiaoshu = (list.at(i) % 100 == 0 ? "" : "." + to_string(list.at(i) % 100));
+        out += to_string(list[i] / 100) + xiaoshu + "\n";
+    }
+    EXPECT_EQ(out,output);
+}
+
+TEST(testCase, more_samples_2) 
+{
+    int i = 0, p = 0;
+    vector<string> input;
+    string output = "25000\n";
+    
+    input.emplace_back("2");
+    input.emplace_back("A ZhangSan CNY 1000 25");
+    input.emplace_back("A LiSi JPY 2200 100");
+    input.emplace_back("1");
+    input.emplace_back("CNY JPY 22");
+    input.emplace_back("1");
+    input.emplace_back("PERSON ZhangSan CNY");
+
+    string out;
+    vector<xchange> xchg_list;
+    vector<xchange_rate> xchg_rate_list;
+    vector<question> questions;
+    int a = stol(input[p++]);
+    while(a--) xchg_list.emplace_back(string_to_exchange(input[p++]));
+    int b = stol(input[p++]);
+    while(b--) xchg_rate_list.emplace_back(string_to_exchange_rate(input[p++]));
+    int c = stol(input[p++]);
+    while(c--) questions.emplace_back(string_to_question(input[p++]));
+    vector<long long> list = get_xchg_result(xchg_rate_list, xchg_list, questions);
+    for(int i = 0; i < list.size(); i++){
+        string xiaoshu = (list.at(i) % 100 == 0 ? "" : "." + to_string(list.at(i) % 100));
+        out += to_string(list[i] / 100) + xiaoshu + "\n";
     }
     EXPECT_EQ(out,output);
 }

@@ -4,7 +4,7 @@
 #include "object.h"
 using namespace std;
 
-class xchange :public stock_object{
+class xchange: public stock_object{
 private:
     std::string stock_type;
     std::string holder_name;
@@ -30,7 +30,7 @@ public:
     void setValuePerStock(int value) { value_per_stock = value; }
 };
 
-class xchange_rate :public stock_object {
+class xchange_rate : public stock_object {
 private:
     std::string source;
     std::string destination;
@@ -84,4 +84,4 @@ double get_sum_exchanges_by_stock(const vector<xchange_rate> &exchanges_rate, co
 
 double get_sum_exchanges_by_name(const vector<xchange_rate> &exchanges_rate, const vector<xchange> &exchanges, const string &currency, const string &name);
 
-vector<int> get_xchg_result(const vector<xchange_rate> &exchanges_rate, const vector<xchange> &exchanges, const vector<question> &questions);
+vector<long long> get_xchg_result(const vector<xchange_rate> &exchanges_rate, const vector<xchange> &exchanges, const vector<question> &questions);

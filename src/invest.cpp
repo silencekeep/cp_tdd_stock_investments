@@ -87,19 +87,19 @@ double get_sum_exchanges_by_name(
     return result;
 }
 
-vector<int> get_xchg_result(
+vector<long long> get_xchg_result(
     const vector<xchange_rate>& exchanges_rate, \
     const vector<xchange>& exchanges, \
     const vector<question>& questions) {
-    vector<int> result_list;
+    vector<long long> result_list;
     for (auto it = questions.begin(); it != questions.end(); it++) {
         if (it->getType() == "PERSON") {
             double result = get_sum_exchanges_by_name(exchanges_rate, exchanges, it->getCurrency(), it->getName());
-            result_list.emplace_back(int(result));
+            result_list.emplace_back(static_cast<long long>(result * 100));
         }
         else if (it->getType() == "STOCK") {
             double result = get_sum_exchanges_by_stock(exchanges_rate, exchanges, it->getCurrency(), it->getName());
-            result_list.emplace_back(int(result));
+            result_list.emplace_back(static_cast<long long>(result * 100));
         }
         else {
             result_list.emplace_back(-1);

@@ -32,9 +32,10 @@ int main(int argc, char* argv[]){
         getline(cin, s);
         questions.emplace_back(string_to_question(s));
     }
-    vector<int> list = get_xchg_result(xchg_rate_list, xchg_list, questions);
+    vector<long long> list = get_xchg_result(xchg_rate_list, xchg_list, questions);
     for (int i = 0; i < list.size(); i++) {
-        cout << list.at(i) << endl;
+        string xiaoshu = (list.at(i) % 100 == 0 ? "" : "." + to_string(list.at(i) % 100));
+        cout << list.at(i) / 100 << xiaoshu << endl;
     }
     return 0;
 }
